@@ -3,20 +3,28 @@ include('bdService.php');
 //header('Content-type: application/json');
 header('Access-Control-Allow-Origin:*');
 
-$mat = $_GET['mat'];
-$mdp = $_GET['mdp'];
+$mat = $_POST['mat'];
+$mdp = $_POST['mdp'];
 
 try
 {
    $maBD = new bdService();
    $sel = "select * from developpeurs where matricule = '$mat'";
    $tabDev = $maBD->selection($sel);
-   var_dump($tabDev);
-   die("ln 15");
    
-   
-   
-   echo json_encode($tabTac);
+   if (isset($tabDev[0]['motDePasse'] ) )
+   { 	 
+      if ($tabDev[0]['motDePasse'] == $mdp)
+	  {
+         echo json_encode($tabDev[0]);
+	  }
+	  else
+		 echo ""; 
+   }
+   else
+   {
+	   echo "";
+   }
 }
 
 catch(Exception $e)

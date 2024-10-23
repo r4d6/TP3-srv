@@ -15,6 +15,12 @@ class bdService
 		$res = $this->bdInterne->query($req);
 		return $this->bdInterne->insert_id;
 	}
+
+	function miseAJour($req)
+    {
+		$res = $this->bdInterne->query($req);
+		return $this->bdInterne->affected_rows;
+	}
 	
 	function selection($req)
 	{
@@ -30,4 +36,6 @@ class bdService
 	
 		return $tabRes;
 	}
+	
+
 }

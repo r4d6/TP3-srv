@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 23 oct. 2024 à 14:02
+-- Généré le : mer. 23 oct. 2024 à 15:09
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.2.9
 
@@ -20,6 +20,22 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `jv24`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `commentaires`
+--
+
+DROP TABLE IF EXISTS `commentaires`;
+CREATE TABLE IF NOT EXISTS `commentaires` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `idDev` int NOT NULL,
+  `idSessTrav` int NOT NULL,
+  `contenu` varchar(50) NOT NULL,
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 

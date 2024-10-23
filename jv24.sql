@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 09 oct. 2024 à 15:07
+-- Généré le : mer. 23 oct. 2024 à 14:02
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.2.9
 
@@ -68,6 +68,22 @@ CREATE TABLE IF NOT EXISTS `projets` (
 INSERT INTO `projets` (`id`, `nom`, `debut`) VALUES
 (1, 'Enigmatik', '2024-10-07 20:23:44'),
 (2, 'KGB', '2024-10-07 20:23:44');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `sessionstravail`
+--
+
+DROP TABLE IF EXISTS `sessionstravail`;
+CREATE TABLE IF NOT EXISTS `sessionstravail` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `idDev` int NOT NULL,
+  `idTache` int NOT NULL,
+  `debut` datetime NOT NULL,
+  `fin` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 

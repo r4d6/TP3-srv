@@ -1,27 +1,44 @@
 <?php
+  //-----------------------------------
+  //   Fichier :  bdService.php
+  //   Par:      Alain Martel
+  //   Date :    2024-10-21
+  //   Modifié par :  
+  //-----------------------------------
 include('outils.php');
-
 
 class bdService
 {
 	private $bdInterne;
+    //------------------------------------------------
+    //
+    //------------------------------------------------
 	function __construct()
 	{
 		$this->bdInterne = new mysqli(SERVEUR, UTILISATEUR, MOT_DE_PASSE, BD);
 	}
-	
+
+    //------------------------------------------------
+    //
+    //------------------------------------------------
 	function insertion($req)
 	{
 		$res = $this->bdInterne->query($req);
 		return $this->bdInterne->insert_id;
 	}
 
+    //------------------------------------------------
+    //
+    //------------------------------------------------
 	function miseAJour($req)
     {
 		$res = $this->bdInterne->query($req);
 		return $this->bdInterne->affected_rows;
 	}
 	
+    //------------------------------------------------
+    //
+    //------------------------------------------------
 	function selection($req)
 	{
 		$tabRes = array();
@@ -36,6 +53,4 @@ class bdService
 	
 		return $tabRes;
 	}
-	
-
 }

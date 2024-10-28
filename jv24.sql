@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 23 oct. 2024 à 15:09
+-- Généré le : lun. 28 oct. 2024 à 21:25
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.2.9
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `commentaires` (
   `contenu` varchar(50) NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `developpeurs` (
   `motDePasse` varchar(10) NOT NULL,
   `idProjet` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `developpeurs`
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `projets` (
   `nom` varchar(50) NOT NULL,
   `debut` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `projets`
@@ -99,7 +99,19 @@ CREATE TABLE IF NOT EXISTS `sessionstravail` (
   `debut` datetime NOT NULL,
   `fin` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `sessionstravail`
+--
+
+INSERT INTO `sessionstravail` (`id`, `idDev`, `idTache`, `debut`, `fin`) VALUES
+(1, 1, 1, '2024-10-28 16:56:22', '2024-10-28 16:56:40'),
+(2, 1, 2, '2024-10-28 16:56:48', '2024-10-28 16:57:43'),
+(3, 1, 2, '2024-10-28 16:58:09', '2024-10-28 16:58:12'),
+(4, 1, 1, '2024-10-28 17:13:48', '2024-10-28 17:20:16'),
+(5, 1, 2, '2024-10-28 17:20:47', '2024-10-28 17:20:51'),
+(6, 1, 2, '2024-10-28 17:21:03', '2024-10-28 17:24:00');
 
 -- --------------------------------------------------------
 
@@ -111,11 +123,11 @@ DROP TABLE IF EXISTS `taches`;
 CREATE TABLE IF NOT EXISTS `taches` (
   `id` int NOT NULL AUTO_INCREMENT,
   `numero` varchar(10) NOT NULL,
-  `titre` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `titre` varchar(25) CHARACTER SET utf8mb4 NOT NULL,
   `objectif` varchar(50) NOT NULL,
   `idProjet` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `taches`

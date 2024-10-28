@@ -1,4 +1,11 @@
 <?php
+
+  //-----------------------------------
+  //   Fichier :  putSession.php
+  //   Par:      Alain Martel
+  //   Date :    2024-10-21
+  //-----------------------------------
+
 include('bdService.php');
 //header('Content-type: application/json');
 header('Access-Control-Allow-Origin:*');

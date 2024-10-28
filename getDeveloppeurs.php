@@ -1,4 +1,12 @@
 <?php
+
+  //-----------------------------------
+  //   Fichier :  getDeveloppeurs.php
+  //   Par:      Alain Martel
+  //   Date :    2024-10-21
+  //   Modifié par :  
+  //-----------------------------------
+
 include('bdService.php');
 header('Content-type: application/json');
 

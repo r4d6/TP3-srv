@@ -7,7 +7,7 @@
   //-----------------------------------
 
 include('bdService.php');
-//header('Content-type: application/json');
+header('Content-type: application/json');
 header('Access-Control-Allow-Origin:*');
 
 
@@ -17,7 +17,7 @@ try
 {
    $maBD = new bdService();
    $fin = date('Y-m-d H:i:s');
-   $upd = "update sessionsTravail set fin = '$fin' where id = $idSessTrav";
+   $upd = "update sessionstravail set fin = '$fin' where id = $idSessTrav";
    $nbSessTravMAJ = $maBD->miseAJour($upd);
    
    echo json_encode($nbSessTravMAJ);

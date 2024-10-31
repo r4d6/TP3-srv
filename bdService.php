@@ -16,6 +16,7 @@ class bdService
 	function __construct()
 	{
 		$this->bdInterne = new mysqli(SERVEUR, UTILISATEUR, MOT_DE_PASSE, BD);
+		$this->bdInterne->set_charset("UTF8");
 	}
 
     //------------------------------------------------

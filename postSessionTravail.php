@@ -7,7 +7,7 @@
   //   Modifié par :  
   //-----------------------------------
 include('bdService.php');
-//header('Content-type: application/json');
+header('Content-type: application/json');
 header('Access-Control-Allow-Origin:*');
 
     //id:number = 0;
@@ -18,7 +18,7 @@ try
 {
    $maBD = new bdService();
    $debut = date('Y-m-d H:i:s');
-   $ins = "insert into sessionsTravail value(null, $idDev, $idTache, '$debut', null )";
+   $ins = "insert into sessionstravail value(null, $idDev, $idTache, '$debut', null )";
    $idNeoSessTrav = $maBD->insertion($ins);
    
    echo json_encode($idNeoSessTrav);

@@ -8,7 +8,7 @@
 
 
 include('bdService.php');
-//header('Content-type: application/json');
+header('Content-type: application/json');
 header('Access-Control-Allow-Origin:*');
 
     //id:number = 0;

@@ -17,7 +17,7 @@ $idDev = $_POST['idDev'];
 try
 {
    $maBD = new bdService();
-   $sel = "select ST.id, idDev, idTache, debut, fin, numero AS numTache from sessionsTravail ST, taches TAC where idDev = $idDev and ST.idTache = TAC.id";
+   $sel = "select ST.id, idDev, idTache, debut, fin, numero AS numTache from sessionstravail ST, taches TAC where idDev = $idDev and ST.idTache = TAC.id";
    
    //die($sel);
    

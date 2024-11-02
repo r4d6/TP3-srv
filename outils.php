@@ -8,9 +8,18 @@
   //-----------------------------------
 
 
+ 
 define('SERVEUR', 'amartel.techinfo-cstj.ca');
 define('UTILISATEUR', 'amartel');
 define('MOT_DE_PASSE', '');
-define('BD', 'amartel_jv24');
+define('BD', 'amartel_jv24Synthese');
+
+
+/*
+define('SERVEUR', 'localhost');
+define('UTILISATEUR', 'root');
+define('MOT_DE_PASSE', '');
+define('BD', 'jv24-synthese');
+*/
 
 ini_set('date.timezone', 'america/new_york');

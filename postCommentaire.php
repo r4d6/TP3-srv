@@ -20,7 +20,7 @@ try
 {
    $maBD = new bdService();
    $dateComm = date('Y-m-d H:i:s');
-   $ins = "insert into commentaires value(null, $idDev, $idSess, '$contenu', '$dateComm' )";
+   $ins = "insert into commentaires value(null, '$contenu', '$dateComm', $idSess, $idDev )";
    $idNeoComm = $maBD->insertion($ins);
    
    echo json_encode($idNeoComm);

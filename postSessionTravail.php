@@ -18,7 +18,7 @@ try
 {
    $maBD = new bdService();
    $debut = date('Y-m-d H:i:s');
-   $ins = "insert into sessionstravail value(null, $idDev, $idTache, '$debut', null )";
+   $ins = "insert into sessionstravail value(null, $idTache, '$debut',  null, $idDev )";
    $idNeoSessTrav = $maBD->insertion($ins);
    
    echo json_encode($idNeoSessTrav);

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 06 nov. 2024 à 03:40
+-- Généré le : mer. 06 nov. 2024 à 20:39
 -- Version du serveur : 8.0.31
--- Version de PHP : 8.2.0
+-- Version de PHP : 8.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `commentaires` (
   UNIQUE KEY `Id` (`id`),
   KEY `Session_Id` (`idSession`),
   KEY `Developpeur_Id` (`idDev`)
-) ENGINE=MyISAM AUTO_INCREMENT=6438 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6439 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `commentaires`
@@ -1244,12 +1244,10 @@ INSERT INTO `commentaires` (`id`, `contenu`, `horodateur`, `idSession`, `idDev`)
 (6036, 'Encore sur le même problème...\n', '2024-10-15 15:38:54', 1726, 38),
 (6037, 'admin page principale signalement fonctionne\n', '2024-10-15 15:54:23', 1731, 34),
 (6038, 'Toujours sur le même problème.\n', '2024-10-15 16:08:27', 1726, 38),
-(6039, 'WORKING ON CSS\n\n', '2024-10-15 16:27:30', 1734, 28),
 (6040, 'commentaire fonctionaliter ajouter\n', '2024-10-15 16:33:31', 1731, 34),
 (6041, 'Création du fichier pour les conversations\n', '2024-10-15 16:49:17', 1735, 37),
 (6042, 'Création de la barre de navigation dans la page de conversation\n', '2024-10-15 16:49:33', 1735, 37),
 (6043, 'Répartition des la page Conversation en deux\n', '2024-10-15 16:49:49', 1735, 37),
-(6044, 'WORKING ON CSS\n\n', '2024-10-15 16:56:43', 1734, 28),
 (6045, 'J\'ai changer L\'URL pour accepter un ID de profile.\n', '2024-10-15 18:08:30', 1727, 33),
 (6046, 'Tout à planter\n\n', '2024-10-15 18:08:38', 1727, 33),
 (6047, 'J\'ai réussi à tout faire marcher, mais la page de personalisation bug.\n', '2024-10-15 18:08:58', 1727, 33),
@@ -1259,24 +1257,16 @@ INSERT INTO `commentaires` (`id`, `contenu`, `horodateur`, `idSession`, `idDev`)
 (6051, 'Je fais faire fonctionner la sauvegarde en BD des segments et l\'ordre.\n', '2024-10-15 18:10:48', 1727, 33),
 (6052, 'On travaille sur la sauvegarde en BD des segments\n', '2024-10-15 19:46:50', 1727, 33),
 (6053, 'revenu de manger.\n', '2024-10-15 19:46:56', 1727, 33),
-(6054, 'css\n\n', '2024-10-15 20:05:03', 1734, 28),
-(6055, 'rien\n', '2024-10-15 20:05:28', 1734, 28),
 (6056, 'Travail toujours sur la sauvegarde\n', '2024-10-15 20:14:04', 1727, 33),
 (6057, 'Réglé les problèmes.\n', '2024-10-15 20:43:48', 1736, 38),
-(6058, 'Cordialement \n', '2024-10-15 21:01:21', 1734, 28),
 (6059, 'En train de d\'essayer de comprendre ce qu\'il faut faire avec les invitations dans la modification d\'un événement.\n', '2024-10-15 21:13:49', 1737, 38),
 (6060, 'Perdu dans la gestion des invitations. Ça va être avec les amis pour l\'instant.\n', '2024-10-15 21:44:49', 1737, 38),
-(6061, 'Suite \n', '2024-10-15 22:27:23', 1734, 28),
 (6062, 'Travaillé sur la route d\'update d\'événement.\n', '2024-10-15 22:37:13', 1738, 38),
 (6063, 'continuation de correction des problemes\n', '2024-10-15 23:02:58', 1731, 34),
 (6064, 'Début d\'une route vers symfony pour avoir les chats\n', '2024-10-15 23:30:50', 1735, 37),
 (6065, 'Les chats vont être recevoir par l\'IdAmitie\n', '2024-10-15 23:31:15', 1735, 37),
-(6066, 'suite\n', '2024-10-15 23:37:14', 1734, 28),
-(6067, 'travail composante frigo selection ingredient\n', '2024-10-16 00:07:20', 1734, 28),
 (6068, 'fin travail pour aujourd\'hui\n', '2024-10-16 00:32:08', 1739, 34),
-(6069, 'frigo css done\n', '2024-10-16 00:38:52', 1734, 28),
-(6070, 'fin / debut profile public\n', '2024-10-16 00:59:21', 1734, 28),
-(6071, 'debut profile public\n', '2024-10-16 01:32:06', 1734, 28),
+(6438, 'commet', '2024-11-06 15:15:06', 1862, 32),
 (6072, 'Correction de la classe Amitie dans Symfony\n', '2024-10-16 01:34:29', 1740, 37),
 (6073, 'Ajout d\'un nouveau champ dans la classe de conversation: lastUpdate\n', '2024-10-16 01:34:54', 1740, 37),
 (6074, 'Terminer la route de conversation qui permet de recevoir tous les conversations des amis d\'un utilisateur\n', '2024-10-16 01:35:59', 1740, 37),
@@ -1294,15 +1284,10 @@ INSERT INTO `commentaires` (`id`, `contenu`, `horodateur`, `idSession`, `idDev`)
 (6086, 'Laisser une évaluation marche\n', '2024-10-16 12:00:13', 1743, 29),
 (6087, 'L\'envoi de notification marche lorsqu\'une cible publie une évaluation\n', '2024-10-16 12:28:18', 1743, 29),
 (6088, 'rentrer 3 jeux\n', '2024-10-16 12:33:00', 1744, 32),
-(6089, 'wip on profile public\n', '2024-10-16 12:33:02', 1745, 28),
 (6090, 'doit aller modifier pour seulement montrer les jeux acceptés\n', '2024-10-16 12:33:11', 1744, 32),
 (6091, 'doit modifier les envois de jeux pour accepter le jeu si admin\n', '2024-10-16 13:02:47', 1744, 32),
-(6092, 'almost done\n', '2024-10-16 13:05:55', 1745, 28),
-(6093, 'fin\n', '2024-10-16 13:19:07', 1745, 28),
 (6094, 'modifier le calcul du % de ressemblane\n', '2024-10-16 13:34:24', 1744, 32),
-(6095, 'working on bouton modifier\n\n', '2024-10-16 13:36:26', 1745, 28),
 (6096, 'Je vais avancer le UI\n', '2024-10-16 13:54:24', 1746, 36),
-(6097, 'fixed issue\n', '2024-10-16 14:07:44', 1745, 28),
 (6098, 'Toujours entrée de données de jeux\n', '2024-10-16 14:34:40', 1744, 32),
 (6099, 'Ajouter les catégories et compagnies manquantes en meme temps\n', '2024-10-16 14:35:02', 1744, 32),
 (6100, 'trier les catégories et compagnies en ordre alphabétique\n', '2024-10-16 14:35:13', 1744, 32),
@@ -1339,12 +1324,8 @@ INSERT INTO `commentaires` (`id`, `contenu`, `horodateur`, `idSession`, `idDev`)
 (6131, 'Je vais faire la logic pour les likes mais je lâche après\n', '2024-10-16 18:32:59', 1747, 33),
 (6132, 'Je vais travailler à pouvoir modifier son compte après la création.\n', '2024-10-16 18:33:22', 1747, 33),
 (6133, 'Le souper arrive dans pas long...\n', '2024-10-16 18:33:30', 1747, 33),
-(6134, 'En train de faire fonctionner Google Maps avec le lieu d\'un événement.\n', '2024-10-16 19:35:06', 1754, 38),
-(6135, 'Étrangement, Google Maps fonctionne même avec des noms de lieu inusités.\n', '2024-10-16 20:04:23', 1754, 38),
 (6136, 'On va arrêter pour ce soir.\n', '2024-10-16 20:20:16', 1755, 33),
 (6137, 'J\'ai fini 2-3 affaires-là\n', '2024-10-16 20:20:27', 1755, 33),
-(6138, 'Google Maps fonctionne correctement.\n', '2024-10-16 20:31:50', 1754, 38),
-(6139, 'Oublié le compteur lol.\n', '2024-10-16 21:17:32', 1754, 38),
 (6140, 'continuation de la page demande de jeu\n', '2024-10-16 22:46:42', 1756, 34),
 (6141, 'ajout d\'un jeu, ne reste qua suprimer la demande/modification\n', '2024-10-16 23:17:18', 1756, 34),
 (6142, 'refuser demande qui marche\n', '2024-10-17 01:40:15', 1756, 34),
@@ -1389,11 +1370,9 @@ INSERT INTO `commentaires` (`id`, `contenu`, `horodateur`, `idSession`, `idDev`)
 (6183, 'fin de V0.5\n', '2024-10-17 10:48:57', 1758, 29),
 (6184, 'J\'ai fix un problème avec le rename playlist\n', '2024-10-17 11:40:50', 1759, 36),
 (6185, 'essayer de debugger\n', '2024-10-17 11:57:43', 1760, 32),
-(6186, 'Reunions\n', '2024-10-17 11:58:00', 1761, 35),
 (6187, 'J\'ai eu quelques problèmes, mais j\'ai fait la recherche\n', '2024-10-17 12:22:50', 1759, 36),
 (6188, 'Terminé pour le moment\n', '2024-10-17 12:23:10', 1759, 36),
 (6189, 'debugger les circular reference et les trop grosses envois de données\n', '2024-10-17 12:58:34', 1760, 32),
-(6190, 'On va devoir retravailler sur le backend\n\n', '2024-10-17 13:17:36', 1761, 35),
 (6191, 'continuation signalement lorsque deja banni\n', '2024-10-17 13:24:41', 1762, 34),
 (6192, 'ajout des groupes\n', '2024-10-17 13:32:40', 1760, 32),
 (6193, 'fix date serializer\n', '2024-10-17 14:36:22', 1760, 32),
@@ -1621,7 +1600,7 @@ INSERT INTO `developpeurs` (`id`, `nom`, `prenom`, `matricule`, `motDePasse`, `i
 (33, 'Féréol', 'Frédéric', '6666666', '11', 9),
 (34, 'Gélinas', 'Gratien', '7777777', '11', 9),
 (35, 'Homerun', 'Homère', '8888888', '11', 9),
-(36, 'Isadora', 'Illianne', '9999999', '11', 10),
+(36, 'Isadora', 'Ivan', '9999999', '11', 10),
 (37, 'Kanga', 'Keros', '0000000', '11', 10),
 (38, 'Léonard', 'Louise', '11', '11', 10);
 
@@ -1665,7 +1644,7 @@ CREATE TABLE IF NOT EXISTS `sessionstravail` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `Id` (`id`),
   KEY `Dev_Id` (`idDev`)
-) ENGINE=MyISAM AUTO_INCREMENT=1856 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=1867 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `sessionstravail`
@@ -1688,7 +1667,7 @@ INSERT INTO `sessionstravail` (`id`, `idTache`, `debut`, `fin`, `idDev`) VALUES
 (1362, 207, '2024-09-16 10:20:21', '2024-09-16 11:55:45', 29),
 (1363, 252, '2024-09-16 10:49:26', '2024-09-16 12:00:34', 38),
 (1364, 229, '2024-09-16 10:50:03', '2024-09-16 11:53:17', 35),
-(1855, 243, '2024-11-05 22:38:35', NULL, 38),
+(1855, 243, '2024-11-05 22:38:35', '2024-11-06 15:34:54', 38),
 (1366, 222, '2024-09-16 11:00:06', '2024-09-16 11:11:16', 32),
 (1367, 252, '2024-09-16 11:07:51', '2024-09-16 11:08:00', 36),
 (1368, 252, '2024-09-16 11:08:03', '2024-09-16 11:08:05', 36),
@@ -2109,7 +2088,17 @@ INSERT INTO `sessionstravail` (`id`, `idTache`, `debut`, `fin`, `idDev`) VALUES
 (1790, 264, '2024-10-20 15:24:06', '2024-10-21 23:19:27', 37),
 (1791, 212, '2024-10-20 15:54:37', '2024-10-20 18:04:29', 31),
 (1792, 270, '2024-10-21 09:10:57', '2024-10-21 09:10:59', 31),
-(1854, 223, '2024-11-05 22:37:13', NULL, 34);
+(1854, 223, '2024-11-05 22:37:13', '2024-11-06 15:38:55', 34),
+(1857, 211, '2024-11-06 15:02:18', '2024-11-06 15:37:20', 28),
+(1858, 211, '2024-11-06 15:13:33', '2024-11-06 15:37:39', 29),
+(1859, 211, '2024-11-06 15:13:58', '2024-11-06 15:37:56', 30),
+(1860, 211, '2024-11-06 15:14:15', '2024-11-06 15:38:30', 31),
+(1861, 228, '2024-11-06 15:14:38', '2024-11-06 15:14:51', 32),
+(1862, 222, '2024-11-06 15:14:56', '2024-11-06 15:15:10', 32),
+(1863, 228, '2024-11-06 15:16:55', NULL, 33),
+(1864, 228, '2024-11-06 15:17:40', '2024-11-06 15:19:22', 35),
+(1865, 240, '2024-11-06 15:19:37', '2024-11-06 15:19:47', 36),
+(1866, 239, '2024-11-06 15:20:02', NULL, 37);
 
 -- --------------------------------------------------------
 

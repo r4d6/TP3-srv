@@ -1,10 +1,10 @@
 <?php
 
   //-----------------------------------
-  //   Fichier :  getDeveloppeurs.php
+  //   Fichier :  getTaches.php
   //   Par:      Alain Martel
-  //   Date :    2024-12-11
-  //   Modifié par :  David Moussette
+  //   Date :    2024-10-21
+  //   Modifié par :  
   //-----------------------------------
 
 include('bdService.php');
@@ -14,10 +14,10 @@ header('Access-Control-Allow-Origin:*');
 try
 {
    $maBD = new bdService();
-   $sel = "select * from developpeurs";
-   $tabDev = $maBD->selection($sel);
+   $sel = "select * from sessionstravail";
+   $tabTac = $maBD->selection($sel);
    
-   echo json_encode($tabDev);
+   echo json_encode($tabTac);
 }
 
 catch(Exception $e)

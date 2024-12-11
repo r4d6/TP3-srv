@@ -1,7 +1,7 @@
 <?php
 
   //-----------------------------------
-  //   Fichier :  getDeveloppeurs.php
+  //   Fichier :  getCommentaires.php
   //   Par:      Alain Martel
   //   Date :    2024-12-11
   //   Modifié par :  David Moussette
@@ -14,7 +14,7 @@ header('Access-Control-Allow-Origin:*');
 try
 {
    $maBD = new bdService();
-   $sel = "select * from developpeurs";
+   $sel = "select * from commentaires";
    $tabDev = $maBD->selection($sel);
    
    echo json_encode($tabDev);
